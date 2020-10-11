@@ -26,7 +26,7 @@ RUN mkdir opendatacam_videos && cd opendatacam_videos && wget https://github.com
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     apt-get install -y nodejs
 
-RUN git clone --depth 1 -b v3.0.1 https://github.com/opendatacam/opendatacam /var/local/opendatacam
+RUN git clone --depth 1 -b v3.0.1 https://github.com/toruscomputer/tcodc.git /var/local/opendatacam
 
 WORKDIR /var/local/opendatacam
 
@@ -43,3 +43,4 @@ EXPOSE 8080 8070 8090
 COPY launch.sh launch.sh
 RUN chmod 777 launch.sh
 CMD ["./launch.sh"]
+
