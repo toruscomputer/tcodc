@@ -43,7 +43,7 @@ class UIControls extends Component {
                 className={`btn btn-default rounded-l ${this.props.mode === MODE.LIVEVIEW ? 'btn-default--active' : ''} ${!this.props.uiSettings.get('pathfinderEnabled') && !this.props.uiSettings.get('counterEnabled') ? 'rounded-r': ''}`}
                 onClick={() => this.props.dispatch(setMode(MODE.LIVEVIEW))}
               >
-                Live view
+                Ao Vivo
               </button>
               {this.props.uiSettings.get('counterEnabled') &&
               (!this.props.recordingStatus.isRecording || this.props.isAtLeastOneCountingAreasDefined) &&
@@ -51,7 +51,7 @@ class UIControls extends Component {
                   className={`btn btn-default border-r border-l border-default-soft border-solid ${this.props.mode === MODE.COUNTERVIEW ? 'btn-default--active' : ''} ${this.props.uiSettings.get('pathfinderEnabled') ? '': 'rounded-r'}`}
                   onClick={() => this.props.dispatch(setMode(MODE.COUNTERVIEW))}
                 >
-                  Counter
+                  Detector
                 </button>
               }
               {this.props.uiSettings.get('pathfinderEnabled') &&
@@ -59,7 +59,7 @@ class UIControls extends Component {
                   className={`btn btn-default rounded-r ${this.props.mode === MODE.PATHVIEW ? 'btn-default--active' : ''}`}
                   onClick={() => this.props.dispatch(setMode(MODE.PATHVIEW))}
                 >
-                  Pathfinder
+                  Rastreador
                 </button>
               }
             </div>
@@ -67,14 +67,9 @@ class UIControls extends Component {
               <button
                 className={`btn btn-default shadow rounded-l ${this.props.mode === MODE.DATAVIEW ? 'btn-default--active' : ''}`}
                 onClick={() => this.props.dispatch(setMode(MODE.DATAVIEW))}>
-                Data
+                Relatório
               </button>
-              <button 
-                className={`btn btn-default shadow rounded-r border-l border-default-soft border-solid ${this.props.mode === MODE.CONSOLEVIEW ? 'btn-default--active' : ''}`}
-                onClick={() => this.props.dispatch(setMode(MODE.CONSOLEVIEW))}
-              >
-                Console
-              </button>
+            
               <button 
                 className={`btn btn-default shadow ml-2 py-0 px-3 rounded border border-default-soft border-solid`}
                 onClick={() => this.props.dispatch(showMenu())}

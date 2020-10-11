@@ -69,7 +69,7 @@ class InitializingView extends Component {
               target="_blank"
               href="/console"
             >
-              Download logs
+              Baixar Logs
             </a>
           </div>
         }

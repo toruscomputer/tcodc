@@ -58,29 +58,29 @@ class Menu extends Component {
             />
           </button>
           <div className="p-5 w-full overflow-y-scroll">
-            <h3 className="mb-4 text-2xl font-bold"><a className="mt-2" href="https://github.com/opendatacam/opendatacam" target="_blank">OpenDataCam</a></h3>
+            <h3 className="mb-4 text-2xl font-bold"><a className="mt-2" href="https://github.com/opendatacam/opendatacam" target="_blank">Torus Computer - Powering Computer Vision Analytics.</a></h3>
             <Toggle
-              label="Counter"
-              description="Count objects on active areas"
+              label="Detector"
+              description="Conta objetos nas areas de interesse"
               enabled={this.props.uiSettings.get('counterEnabled')}
               onChange={(value) => this.props.dispatch(setUiSetting('counterEnabled', value))}
             />
             <Toggle
-              label="Pathfinder"
-              description="Display paths and positions"
+              label="Rastreador"
+              description="Rastreia a posição de objetos"
               enabled={this.props.uiSettings.get('pathfinderEnabled')}
               onChange={(value) => this.props.dispatch(setUiSetting('pathfinderEnabled', value))}
             />
             <Toggle
-              label="Tracker accuracy"
-              description="Display tracker accuracy"
+              label="Precisão"
+              description="Revela as areas mais visiveis do video"
               enabled={this.props.uiSettings.get('heatmapEnabled')}
               onChange={(value) => this.props.dispatch(setUiSetting('heatmapEnabled', value))}
             />
             <div className="mt-16"></div>
             <Toggle
-              label="Dark mode"
-              description="Turn dark UI elements on"
+              label="Dark"
+              description="Ativa Modo Noite"
               enabled={this.props.userSettings.get('darkMode')}
               onChange={(darkMode) => {
                 this.props.dispatch(setUserSetting('darkMode', darkMode))
@@ -88,8 +88,8 @@ class Menu extends Component {
             />
             <div className="mb-4 mt-4 flex items-center justify-between">
               <div className="mr-3">
-                <h4 className="text-xl font-bold">Dimmer</h4>
-                <p className="text-xs">Opacity of camera image</p>
+                <h4 className="text-xl font-bold">Nitidez</h4>
+                <p className="text-xs">Transparencia do Video</p>
               </div>
               <div className="flex">
                 <button
@@ -117,9 +117,8 @@ class Menu extends Component {
           </div>
           <div className="menu-footer bg-black text-white p-5 w-full">
               <div className="flex flex-col">
-                  <p>Version {this.props.version}</p>
-                  <a className="mt-2" target="_blank" href="/api/doc">API documentation</a>
-                  <a className="mt-2" href="https://github.com/opendatacam/opendatacam" target="_blank">About</a>
+                  
+                  <a className="mt-2" href="" target="_blank">toruscomputer.com</a>
               </div>
           </div>
         </div>
